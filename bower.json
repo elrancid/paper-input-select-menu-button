@@ -1,9 +1,10 @@
 {
-  "name": "paper-menu-button",
+  "name": "paper-input-select-menu-button",
   "version": "1.0.3",
   "description": "A material design element that composes a trigger and a dropdown menu",
   "authors": [
-    "The Polymer Authors"
+    "The Polymer Authors",
+    "Davide Zeffiro <elrancid@gmail.com>"
   ],
   "keywords": [
     "web-components",
@@ -12,14 +13,14 @@
     "menu",
     "button"
   ],
-  "main": "paper-menu-button.html",
+  "main": "paper-input-select-menu-button.html",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/PolymerElements/paper-menu-button"
+    "url": "git://github.com/elrancid/paper-input-select-menu-button"
   },
   "license": "MIT",
-  "homepage": "https://github.com/PolymerElements/paper-menu-button",
+  "homepage": "https://github.com/elrancid/paper-input-select-menu-button",
   "dependencies": {
     "polymer": "polymer/polymer#^1.0.0",
     "neon-animation": "polymerelements/neon-animation#^1.0.0",

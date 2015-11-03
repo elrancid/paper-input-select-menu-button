@@ -1,8 +1,17 @@
+paper-input-select
+===================
+
+paper-input-select is an advanced paper-dropdown-menu.
+
+WARNING! In development. Not ready.
+
+---
+
 
 <!---
 
 This README is automatically generated from the comments in these files:
-paper-menu-button-animations.html  paper-menu-button.html
+paper-input-select-menu-button-animations.html  paper-input-select-menu-button.html
 
 Edit those files, and our readme bot will duplicate them over here!
 Edit this file, and the bot will squash your changes :)

@@ -300,11 +300,19 @@ Custom property | Description | Default
         focusTarget: {
           type: Object,
           observer: 'focusTargetChanged'
+        },
+
+        /**
+         * rancid
+         */
+        debug: {
+          type: Boolean,
+          value: false
         }
       },
 
       focusTargetChanged: function(to, from) {
-        console.debug('paper-input-select-menu-button.focusTargetChanged() to:',to);
+        if (this.debug) console.debug('paper-input-select-menu-button.focusTargetChanged() to:',to);
       },
 
       hostAttributes: {
@@ -328,7 +336,7 @@ Custom property | Description | Default
        * to the dropdown trigger.
        */
       open: function() {
-        console.debug('paper-input-select-menu-button.open()');
+        if (this.debug) console.debug('paper-input-select-menu-button.open()');
         if (this.disabled) {
           return;
         }
@@ -340,7 +348,7 @@ Custom property | Description | Default
        * Hide the dropdown content.
        */
       close: function() {
-        console.debug('paper-input-select-menu-button.close()');
+        if (this.debug) console.debug('paper-input-select-menu-button.close()');
         this.$.dropdown.close();
       },
 
@@ -352,7 +360,7 @@ Custom property | Description | Default
        * set to `"iron-select"`.
        */
       _onIronSelect: function(event) {
-        console.debug('paper-input-select-menu-button._onIronSelect()');
+        if (this.debug) console.debug('paper-input-select-menu-button._onIronSelect()');
         if (!this.ignoreSelect) {
           this.close();
         }
@@ -366,7 +374,7 @@ Custom property | Description | Default
        * @param {boolean} oldOpened The previous value of `opened`.
        */
       _openedChanged: function(opened, oldOpened) {
-        console.debug('paper-input-select-menu-button._openedChanged() opened:',opened);
+        if (this.debug) console.debug('paper-input-select-menu-button._openedChanged() opened:',opened);
         if (opened) {
           // TODO(cdata): Update this when we can measure changes in distributed
           // children in an idiomatic way.
@@ -387,7 +395,7 @@ Custom property | Description | Default
        * @param {boolean} disabled True if disabled, otherwise false.
        */
       _disabledChanged: function(disabled) {
-        console.debug('paper-input-select-menu-button._disabledChanged()');
+        if (this.debug) console.debug('paper-input-select-menu-button._disabledChanged()');
         Polymer.IronControlState._disabledChanged.apply(this, arguments);
         if (disabled && this.opened) {
           this.close();
